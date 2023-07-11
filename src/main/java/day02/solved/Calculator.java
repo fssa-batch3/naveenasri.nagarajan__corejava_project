@@ -31,5 +31,5 @@ public class Calculator {
 		System.out.println(calc.add(2.5f, 3.7f)); // Output: 6.2
 		System.out.println(calc.add("Hello", "World")); // Output: HelloWorld
 	}
-	
+
 }
