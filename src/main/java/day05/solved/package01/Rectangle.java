@@ -16,7 +16,6 @@ public class Rectangle extends Polygon {
 
 	@Override
 	public double calculateArea() {
-		// TODO Auto-generated method stub
 		return this.length * this.breadth;
 	}
 
