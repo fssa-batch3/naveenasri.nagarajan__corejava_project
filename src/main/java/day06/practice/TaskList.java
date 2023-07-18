@@ -15,7 +15,6 @@ public class TaskList {
 
 	public static void main(String[] args) {
 		ArrayList<Task> tasks = new ArrayList<Task>();
-		// Add tasks to the list...
 
 		boolean found = findTaskByName("Task 1", tasks);
 		System.out.println(found);
