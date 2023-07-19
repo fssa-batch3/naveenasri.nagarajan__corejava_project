@@ -30,7 +30,7 @@ class Account {
 	}
 }
 
-public interface ATM {
+ interface ATM {
 	boolean deposit(Account account, double amount);
 
 	boolean withdraw(Account account, double amount) throws Exception;

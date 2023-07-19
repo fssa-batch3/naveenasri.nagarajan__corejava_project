@@ -31,18 +31,18 @@ public class Task {
 			return false;
 		}
 		Task task = (Task) obj;
-		return id == task.id && Objects.equals(name, task.name) && Objects.equals(deadline, task.deadline);
+		return Objects.equals(name, task.name) && Objects.equals(deadline, task.deadline);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name, deadline);
+		return Objects.hash(name, deadline);
 	}
 
 	public static void main(String[] args) {
 		ArrayList<Task> arr = new ArrayList<>();
 		Task task1 = new Task("Swimming", 1, "2023-07-22");
-		Task task4 = new Task("Swimming", 1, "2023-07-22");
+		Task task4 = new Task("Swimming", 4, "2023-07-22");
 		Task task2 = new Task("Gardening", 2, "2015-06-05");
 		Task task3 = new Task("Playing with pets", 3, "2033-09-30");
 		arr.add(task1);
