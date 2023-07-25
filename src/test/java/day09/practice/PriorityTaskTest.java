@@ -12,7 +12,7 @@ public class PriorityTaskTest {
 
 	@Test
 	public void testSortTasksByPriority() {
-
+		
 		List<PrioTask> array = new ArrayList<>();
 		PrioTask task1 = new PrioTask("Gardening", 2, "2015-06-05", 1);
 		PrioTask task2 = new PrioTask("Swimming", 1, "2023-07-22", 2);
@@ -22,7 +22,7 @@ public class PriorityTaskTest {
 		array.add(task2);
 		array.add(task3);
 		array.add(task4);
-
+		
 		List<PrioTask> sortedArray = new ArrayList<>();
 		PrioTask task5 = new PrioTask("Swimming", 1, "2023-07-22", 2);
 		PrioTask task6 = new PrioTask("Swimming", 1, "2023-08-22", 2);
@@ -33,11 +33,14 @@ public class PriorityTaskTest {
 		sortedArray.add(task7);
 		sortedArray.add(task8);
 		System.out.println(array);
-
+	
+		
 		Collections.sort(sortedArray);
 		System.out.println(sortedArray);
-
+		
 		assertEquals(array, sortedArray);
 	}
+
+	
 
 }

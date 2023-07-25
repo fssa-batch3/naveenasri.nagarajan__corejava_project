@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
-public class CityNameTest {
+public class RemoveDuplicateTestCase {
 
 	@Test
 	public static void main(String[] args) {

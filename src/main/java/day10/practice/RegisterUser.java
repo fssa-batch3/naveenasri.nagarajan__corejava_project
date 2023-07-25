@@ -2,52 +2,53 @@ package day10.practice;
 
 import java.util.ArrayList;
 
-public class RegisterUser {
+class User {
+	int id;
+	String name;
+	String emailId;
 
-	public static ArrayList<User> arr = new ArrayList<>();
-
-	public ArrayList<User> getArr() {
-		return arr;
+	public User(int id, String name, String emailId) {
+		this.id = id;
+		this.name = name;
+		this.emailId = emailId;
 	}
+}
 
-	public ArrayList<User> register(User user) throws UserAlreadyExistsException {
+class UserAlreadyExistsException extends Exception {
+	public UserAlreadyExistsException(String msg) {
+		super(msg);
+	}
+}
 
-		if (user.getEmailId().isEmpty())
-			throw new UserAlreadyExistsException("Email Id is empty");
+class UserManager {
+	private ArrayList<User> userList = new ArrayList<>();
 
-		for (User exist : arr) {
-			if (exist.getEmailId().equals(user.getEmailId()))
-				throw new UserAlreadyExistsException(user.getEmailId() + " is already exists");
+	public void register(User user) throws UserAlreadyExistsException {
+		for (User existingUser : userList) {
+			if (existingUser.emailId.equals(user.emailId)) {
+				throw new UserAlreadyExistsException("User with email ID already exists: " + user.emailId);
+			}
 		}
-
-		arr.add(user);
-
-		return arr;
-
+		userList.add(user);
+		System.out.println("User registered successfully: " + user.name);
 	}
+}
 
+public class RegisterUser {
 	public static void main(String[] args) {
+		UserManager userManager = new UserManager();
 
-		RegisterUser registerUser = new RegisterUser();
-
-		User user1 = new User(1, "Maha", "maha@gmail.com");
-		User user2 = new User(2, "Jaya", "jaya@gmail.com");
-		User user3 = new User(3, "Navee", "navee@gmail.com");
+		User user1 = new User(1, "John", "john@example.com");
+		User user2 = new User(2, "Alice", "alice@example.com");
 
 		try {
-			registerUser.register(user1);
-			registerUser.register(user2);
-			registerUser.register(user3);
+			userManager.register(user1);
+			userManager.register(user2);
 
-			for (User user : arr) {
-
-				System.out.println("Id:" + user.getId() + " Name:" + user.getName() + " Email Id:" + user.getEmailId());
-
-			}
-
+			User duplicateUser = new User(3, "Jane", "john@example.com");
+			userManager.register(duplicateUser);
 		} catch (UserAlreadyExistsException e) {
-			e.printStackTrace();
+			System.out.println("Error: " + e.getMessage());
 		}
 	}
-
 }

@@ -13,7 +13,6 @@ public class UserRegistrationTest {
 		User user = new User(2, "Alice", "alice@gmail.com");
 
 		try {
-
 			userManager.register(user);
 			User duplicateUser = new User(3, "Jane", "john@example.com");
 			userManager.register(duplicateUser);

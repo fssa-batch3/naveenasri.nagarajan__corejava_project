@@ -5,8 +5,7 @@ import java.util.HashSet;
 
 import org.junit.jupiter.api.Test;
 
-public class UniqueValueTest {
-
+public class TestHashSetPractice {
 	@Test
 	public void checkArrayValue() {
 		ArrayList<Integer> array = new ArrayList<Integer>();
@@ -22,5 +21,4 @@ public class UniqueValueTest {
 		System.out.println("The duplicate removed HashSet : " + secondArray);
 
 	}
-
 }

@@ -1,10 +1,11 @@
 package day07.practice;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class TaskTest {
+public class TestTask {
 
 	@Test
 	public void checkArrayListTaskNameData() {
@@ -26,7 +27,7 @@ public class TaskTest {
 		Task one = new Task("Swimming", 1, "2023-07-22");
 		System.out.println("The task deadline is 2023-07-22");
 
-		if (one.getDeadLine().equals(one.deadline)) {
+		if (one.getDeadline().equals(one.deadline)) {
 			System.out.println("Pass");
 
 		} else {
@@ -34,7 +35,7 @@ public class TaskTest {
 
 		}
 
-		assertEquals(one.getDeadLine(), one.deadline);
+		assertEquals(one.getDeadline(), one.deadline);
 	}
 
 	@Test

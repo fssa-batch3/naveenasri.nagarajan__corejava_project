@@ -3,7 +3,7 @@ package day06.practice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DuplicateTasks {
+public class RemoveDuplicate  {
 
 	public static void main(String[] args) {
 

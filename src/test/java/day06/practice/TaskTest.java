@@ -8,9 +8,9 @@ public class TaskTest {
 
 	@Test
 	public void checkArrayListTaskNameData() {
-		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
+		Task one = new Task("Finish report",1);
 		System.out.println("The task name is : Finish report");
-		if (one.getName().equals(one.taskName)) {
+		if (one.getTaskName().equals(one.taskName)) {
 			System.out.println("Pass");
 
 		} else {
@@ -18,30 +18,16 @@ public class TaskTest {
 
 		}
 
-		assertEquals(one.getName(), one.taskName);
+		assertEquals(one.getTaskName(), one.taskName);
 	}
 
-	@Test
-	public void checkArrayListTaskDescriptionData() {
-		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
-		System.out.println("The task description is complete the quarterly sales report.");
-
-		if (one.getDescription().equals(one.description)) {
-			System.out.println("Pass");
-
-		} else {
-			System.out.println("Fail");
-
-		}
-
-		assertEquals(one.getDescription(), one.description);
-	}
+	
 
 	@Test
 	public void checkArrayListTaskIdData() {
-		addTask one = new addTask(1, "Finish report", "Complete the quarterly sales report.");
+		Task one = new Task("Finish report",2);
 		System.out.println("The task ID is " + 1);
-		if (one.getId() == one.taskId) {
+		if (one.getPriority() == one.priority) {
 			System.out.println("Pass");
 
 		} else {
@@ -49,7 +35,7 @@ public class TaskTest {
 
 		}
 
-		assertEquals(one.getId(), one.taskId);
+		assertEquals(one.getPriority(), one.priority);
 	}
 
 }

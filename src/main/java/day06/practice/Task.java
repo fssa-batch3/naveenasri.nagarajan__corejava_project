@@ -1,32 +1,53 @@
 package day06.practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Task {
-	
+
 	public String taskName;
 
 	public int priority;
 
-	public static void main(String[] args) {
-
-		ArrayList<Task> taskList = new ArrayList<>();
-
-		Task task1 = new Task();
-		task1.taskName = "Task 1";
-		task1.priority = 1;
-		taskList.add(task1);
-
-		Task task2 = new Task();
-		task2.taskName = "Task 2";
-		task2.priority = 2;
-		taskList.add(task2);
-
-		Task task3 = new Task();
-		task3.taskName = "Task 3";
-		task3.priority = 3;
-		taskList.add(task3);
-
-		System.out.println(taskList);
+	public Task(String taskName, int priority) {
+		this.priority = priority;
+		this.taskName = taskName;
 	}
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	@Override
+	public String toString() {
+		return "The Task is : " + taskName + ", Priority : " + priority;
+	}
+
+	public static void main(String[] args) {
+		ArrayList<Task> taskList = new ArrayList<>();
+		taskList.add(new Task("Wake up", 2));
+		taskList.add(new Task("Nets session", 1));
+		taskList.add(new Task("go to office", 3));
+
+		for (int i = 0; i < taskList.size(); i++) {
+			System.out.println(taskList.get(i));
+		}
+
+	}
+
 }
