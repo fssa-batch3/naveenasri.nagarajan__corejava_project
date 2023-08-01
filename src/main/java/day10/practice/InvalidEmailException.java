@@ -22,7 +22,7 @@ class EmailValidator {
 	public static boolean isValidEmail(String emailId) throws ValidateEmailException {
 		final String EMAIL_PATTERN = "^[a-z]+[a-z0-9._-]*@[a-z]+\\.[a-z]{2,}$";
 
-		if (emailId == null) {
+		 if (emailId == null) {
 			throw new ValidateEmailException("Email ID is null");
 		} else if (emailId.isEmpty()) {
 			throw new ValidateEmailException("Email ID is null");

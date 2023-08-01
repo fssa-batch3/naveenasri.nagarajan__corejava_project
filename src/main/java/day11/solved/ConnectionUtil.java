@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.xdevapi.Statement;
 
 public class ConnectionUtil {
 	public static Connection getConnection() throws SQLException {

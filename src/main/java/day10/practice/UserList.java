@@ -15,7 +15,7 @@ public class UserList {
 		StringBuilder outputString = new StringBuilder("");
 		Map<String, TreeSet<String>> deptEmpNameMap = new TreeMap<String, TreeSet<String>>();
 		if (departmentNameList == null) {
-			return "";
+			return ""; 
 		} else {
 			for (String sourceLine : departmentNameList) {
 				String[] keyValuePair = sourceLine.split(",");
@@ -40,7 +40,7 @@ public class UserList {
 		}
 		return outputString.toString();
 	}
-
+ 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int numOfLines = sc.nextInt();

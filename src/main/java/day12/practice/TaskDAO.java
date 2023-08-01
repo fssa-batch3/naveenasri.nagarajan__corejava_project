@@ -28,9 +28,11 @@ class TaskDAO {
 		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD)) {
 			PreparedStatement Statement = connection
 					.prepareStatement("INSERT INTO task (id, name, status) VALUES (?, ?, ?)");
+			
 			Statement.setInt(1, task.id);
 			Statement.setString(2, task.name);
 			Statement.setString(3, task.status);
+			
 			Statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new DAOException("Error creating task: " + e.getMessage());

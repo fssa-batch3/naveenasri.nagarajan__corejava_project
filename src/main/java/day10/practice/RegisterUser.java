@@ -11,16 +11,17 @@ class User {
 		this.id = id;
 		this.name = name;
 		this.emailId = emailId;
-	}
 }
 
+}
 class UserAlreadyExistsException extends Exception {
 	public UserAlreadyExistsException(String msg) {
 		super(msg);
-	}
+	} 
 }
 
-class UserManager {
+
+class UserManager { 
 	private ArrayList<User> userList = new ArrayList<>();
 
 	public void register(User user) throws UserAlreadyExistsException {
@@ -35,7 +36,7 @@ class UserManager {
 }
 
 public class RegisterUser {
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		UserManager userManager = new UserManager();
 
 		User user1 = new User(1, "John", "john@example.com");
@@ -51,4 +52,4 @@ public class RegisterUser {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
-}
+} 
